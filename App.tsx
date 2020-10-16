@@ -1,8 +1,4 @@
-import React from "react";
-import App from "./src/view/App";
-
-const Root = () => {
-  return <App />;
-};
-
-export default Root;
+const STORYBOOK_START = true;
+export default STORYBOOK_START
+  ? require("./storybook").default
+  : require("./src/view/App").default;
