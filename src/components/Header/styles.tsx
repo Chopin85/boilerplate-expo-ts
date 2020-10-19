@@ -1,12 +1,14 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    marginTop: 25,
-    paddingTop: 10,
+  nav: {
+    flexDirection: "row",
+    justifyContent: "space-around",
   },
-  container: {
+  navItem: {
     flex: 1,
+    alignItems: "center",
+    padding: 10,
   },
 });
 
