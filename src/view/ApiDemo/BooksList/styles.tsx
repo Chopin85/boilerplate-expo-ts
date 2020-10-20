@@ -1,13 +1,15 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  button: {
-    alignSelf: "center",
-    paddingVertical: 8,
-    backgroundColor: "red",
-    textAlign: "center",
+  container: {
+    flex: 1,
+  },
+  booksContainer: {
     alignItems: "center",
-    marginBottom: 8,
+  },
+  title: {
+    alignSelf: "center",
+    marginBottom: 5,
   },
 });
 

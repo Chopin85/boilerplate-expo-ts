@@ -5,11 +5,15 @@ import styles from "./styles";
 interface Props {
   onPress: () => void;
   children: JSX.Element;
+  width?: string;
 }
 
-const ButtonAction = ({ onPress, children }: Props) => {
+const ButtonAction = ({ onPress, children, width }: Props) => {
   return (
-    <Pressable style={styles.button} onPress={onPress}>
+    <Pressable
+      style={[styles.button, { width: width ? width : "70%" }]}
+      onPress={onPress}
+    >
       {children}
     </Pressable>
   );

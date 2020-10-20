@@ -4,7 +4,7 @@ import { Route, NativeRouter, BackButton } from "react-router-native";
 import Header from "../../components/Header";
 import Home from "../Home";
 import Demo from "../Demo";
-import Topics from "../Topics";
+import ApiDemo from "../ApiDemo";
 
 import styles from "./styles";
 
@@ -17,7 +17,7 @@ const App = () => {
       <View style={styles.container}>
         <Route exact path="/" component={Home} />
         <Route path="/demo" component={Demo} />
-        <Route path="/topics" component={Topics} />
+        <Route path="/apidemo" component={ApiDemo} />
       </View>
     </NativeRouter>
   );

@@ -11,7 +11,7 @@ import {
   setCounterToValue,
   resetCounter,
 } from "../../store/counter/actions";
-import ButtonActiton from "../ButtonAction";
+import ButtonAction from "../ButtonAction";
 
 const Drawer = () => {
   const dispatch = useDispatch();
@@ -20,14 +20,14 @@ const Drawer = () => {
 
   return (
     <View style={styles.drawerContainer}>
-      <ButtonActiton
+      <ButtonAction
         onPress={() => {
           dispatch(closeDrawer());
           setValue("");
         }}
       >
         <Text>Close</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.drawerTitle}>Drawer</Text>
       <Text style={styles.buttonTitle}>Enter a value :</Text>
 
@@ -46,35 +46,35 @@ const Drawer = () => {
       />
 
       <Text style={styles.buttonTitle}>ADD</Text>
-      <ButtonActiton onPress={() => dispatch(incrementCounter())}>
+      <ButtonAction onPress={() => dispatch(incrementCounter())}>
         <Text>+1</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.buttonTitle}>REMOVE</Text>
-      <ButtonActiton onPress={() => dispatch(decrementCounter())}>
+      <ButtonAction onPress={() => dispatch(decrementCounter())}>
         <Text>-1</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.buttonTitle}>ADD {value}</Text>
-      <ButtonActiton
+      <ButtonAction
         onPress={() => dispatch(incrementCounterWithValue(parseInt(value)))}
       >
         <Text>+{value}</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.buttonTitle}>REMOVE {value}</Text>
-      <ButtonActiton
+      <ButtonAction
         onPress={() => dispatch(decrementCounterWithValue(parseInt(value)))}
       >
         <Text>+{value}</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.buttonTitle}>SET TO {value}</Text>
-      <ButtonActiton
+      <ButtonAction
         onPress={() => dispatch(setCounterToValue(parseInt(value)))}
       >
         <Text>SET {value}</Text>
-      </ButtonActiton>
+      </ButtonAction>
       <Text style={styles.buttonTitle}>RESET</Text>
-      <ButtonActiton onPress={() => dispatch(resetCounter())}>
+      <ButtonAction onPress={() => dispatch(resetCounter())}>
         <Text>RESET</Text>
-      </ButtonActiton>
+      </ButtonAction>
     </View>
   );
 };

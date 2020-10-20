@@ -12,8 +12,8 @@ const Header = () => (
     <Link to="/demo" underlayColor="#f0f4f7" style={styles.navItem}>
       <Text>Demo</Text>
     </Link>
-    <Link to="/topics" underlayColor="#f0f4f7" style={styles.navItem}>
-      <Text>Topics</Text>
+    <Link to="/ApiDemo" underlayColor="#f0f4f7" style={styles.navItem}>
+      <Text>ApiDemo</Text>
     </Link>
   </View>
 );

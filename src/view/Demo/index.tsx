@@ -1,5 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { View, Text, Button, Animated } from "react-native";
+import {
+  View,
+  Animated,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 import BackButton from "../../components/BackButton";
 import Drawer from "../../components/Drawer";
 import Counter from "./Counter";
@@ -44,23 +49,25 @@ const Demo = () => {
   }, []);
 
   return (
-    <>
-      <Counter />
-      <Animated.View
-        style={[
-          styles.fadingContainer,
-          {
-            transform: [
-              {
-                translateX: drawerAnim,
-              },
-            ],
-          },
-        ]}
-      >
-        <Drawer />
-      </Animated.View>
-    </>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={{ flex: 1 }}>
+        <Counter />
+        <Animated.View
+          style={[
+            styles.fadingContainer,
+            {
+              transform: [
+                {
+                  translateX: drawerAnim,
+                },
+              ],
+            },
+          ]}
+        >
+          <Drawer />
+        </Animated.View>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
