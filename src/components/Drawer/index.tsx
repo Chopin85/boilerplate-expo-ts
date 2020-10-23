@@ -63,7 +63,7 @@ const Drawer = () => {
       <ButtonAction
         onPress={() => dispatch(decrementCounterWithValue(parseInt(value)))}
       >
-        <Text>+{value}</Text>
+        <Text>-{value}</Text>
       </ButtonAction>
       <Text style={styles.buttonTitle}>SET TO {value}</Text>
       <ButtonAction
