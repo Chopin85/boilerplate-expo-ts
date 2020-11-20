@@ -45,7 +45,7 @@ const Demo = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    dispatch(closeDrawer());
+    if (isOpen) dispatch(closeDrawer());
   }, []);
 
   return (
