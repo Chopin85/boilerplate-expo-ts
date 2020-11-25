@@ -4,7 +4,7 @@ import { fetchBooks } from "../../../store/api/actions";
 import Book from "../Book";
 // import Spinner from "components/Spinner";
 // import Button from "components/Buttons/Button";
-import ButtonAction from "../../../components/ButtonAction";
+import { Button } from "react-native-elements";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { RootState } from "../../../store";
 
@@ -25,9 +25,12 @@ const BooksList = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>with React hooks (functional component)</Text>
-      <ButtonAction width="40%" onPress={() => dispatch(fetchBooks())}>
-        <Text>Refresh</Text>
-      </ButtonAction>
+      <Button
+        title="Refresh"
+        buttonStyle={styles.buttonStyle}
+        titleStyle={styles.titleStyle}
+        onPress={() => dispatch(fetchBooks())}
+      />
       <View style={styles.booksContainer}>{Books}</View>
     </View>
   );
